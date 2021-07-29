@@ -6,7 +6,7 @@ const ContactBTN : React.FC = () => {
     return (
         <Navbar.Brand> 
                 <Phone color="black" size={18} />
-                +41 2283 111
+                +94 41 2283 111
         </Navbar.Brand>
           
     );
