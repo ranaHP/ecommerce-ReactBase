@@ -1,0 +1,115 @@
+.product-item-area {
+    padding-bottom: 100px;
+    font-family: 'Montserrat', sans-serif;
+    .product-items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product-item-area {
+        
+        .product-item-set-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .product-item-container {
+            width: 25%;
+            padding: 10px;
+
+            .product-item {
+                border: 1px solid rgba(128, 128, 128, 0.377);
+                border-radius: 8px;
+
+                .product-image {
+                    width: 100%;
+                    background-color: transparent;
+                    text-align: center;
+                   
+
+                    .item-title{
+                        font-weight: 500;
+                        font-size: 1.1em;
+                    }
+                }
+
+                .product-price-area{
+                    display: flex;
+                    justify-content: space-around;
+                    font-size: 1.15em;
+
+                    .product-ori-price{
+                        color: gray;
+                        text-decoration: line-through;
+                    }   
+
+                    .product-offer-price{
+                        color: $primary-color;
+                        font-weight: 500;
+                        .cents{
+                            font-size: .7em;
+                        }
+                    }
+                }
+                
+                .quantity-area {
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 10px;
+
+                    .quantity{
+                        width: 30%;
+                    }
+
+                    .add-to-cart{
+                        background-color: $primary-color;
+                        border-radius: 25px;
+                        border:1px solid $primary-color;
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@include media-breakpoint-down(lg) {
+    .product-item-area {
+       font-size: .9em;
+        .product-item-area {
+            
+            .product-item-container {
+                width: 33%;
+                
+            }
+        }
+    
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .product-item-area {
+       font-size: .9em;
+        .product-item-area {
+            
+            .product-item-container {
+                width: 50%;
+                .product-item{
+                    .quantity-area{
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .quantity{
+                            margin: auto;
+                            padding-bottom: 10px;
+                            width: 80%;
+                        }
+                    }        
+                }
+            }
+        }
+    
+    }
+}

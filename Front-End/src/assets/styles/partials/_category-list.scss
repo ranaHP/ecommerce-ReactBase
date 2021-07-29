@@ -32,7 +32,7 @@
             .title {
                 font-size: 1em;
                 font-family: 'Montserrat', sans-serif;
-                font-weight: bold;
+                font-weight: 500;
                 color: black;
                 padding-bottom: 10px;
             }
@@ -41,9 +41,9 @@
     
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     .category-list {
-        font-size: 0.7em;
+        font-size: 0.65em;
         .category-items-container  {
             .item-container {
                 padding: 6px;
