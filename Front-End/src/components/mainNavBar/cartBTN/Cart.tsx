@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
-import {ShoppingCart } from "react-feather";
+import {ShoppingCart, User } from "react-feather";
 
 const Cart : React.FC = () => {
     return (

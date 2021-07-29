@@ -13,7 +13,7 @@
         font-weight: 400;
         color: rgba(46, 46, 46, 0.678);
         svg {
-            margin: 3px 8px 0 8px;
+            margin: 3px 8px 0px 8px;
             color: $primary-color;
         }
 
@@ -37,7 +37,7 @@
         margin: 0;
         font-size: 1.05em;
         height: 33px;
-        line-height: 0;
+        line-height: 0%;
         border: 1px solid $primary-color;
         padding: 1px 10px 2px 10px;
         background-color: $primary-color;
