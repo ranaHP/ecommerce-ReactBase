@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import CategoryList from "../components/categoryList/CategoryList";
 import HeroBanner from "../components/heroBanner/HeroBanner";
 import MainNavBar from "../components/mainNavBar/MainNavBar";
 import SearchBox from "../components/searchBox/SearchBox";
@@ -14,6 +15,7 @@ const MainView : React.FC = () => {
            <SubNavBar/>
            <HeroBanner/>
            <SearchBox/>
+           <CategoryList/>
        </Container>
     );
 }
