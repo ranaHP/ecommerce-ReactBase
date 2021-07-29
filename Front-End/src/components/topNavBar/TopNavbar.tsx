@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import AccountBTN from "./accountBTN/AccountBTN";
 import ContactBTN from "./contactBTN/ContactBNT";
 import DiliveryBTN from "./diliveryBTN/DiliveryBTN";

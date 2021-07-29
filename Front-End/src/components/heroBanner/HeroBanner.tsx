@@ -8,7 +8,7 @@ const HeroBanner : React.FC = () => {
         <Row className="hero-banner m-0">
             <Image src={heroBanner} fluid className="image-container p-0" />
             <Col xs={5} sm={5} md={5} lg={5} xl={5} className="text-container" >
-                <Image src={logoImage} className="image" />
+                <Image src={logoImage} className="image" ></Image>
                 <span className="title-1">
                     100% Healthy & Affordable
                 </span>
