@@ -1,7 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import MainNavBar from "../components/mainNavBar/MainNavBar";
+// import MainNavBar from "../components/mainNavBar/MainNavBar";
 import TopNavbar from "../components/topNavBar/TopNavbar";
+import MainNavBar from "../components/mainNavBar/MainNavBar";
 
 const MainView : React.FC = () => {
     return (
