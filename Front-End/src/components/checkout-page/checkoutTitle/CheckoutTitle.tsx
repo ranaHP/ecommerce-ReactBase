@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Nav, Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
 const CheckoutPageTitle: React.FC = () => {
     return (

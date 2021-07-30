@@ -2,7 +2,7 @@ import { IOrderItem } from "../../Types";
 
 export const products:IOrderItem[] = [ 
     {
-        item_no: 1,
+        _id: 1,
         name: "Apple",
         qty: 3,
         unite_price: 65,

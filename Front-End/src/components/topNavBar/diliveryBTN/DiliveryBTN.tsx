@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
-import {Phone, Trash, Truck } from "react-feather";
+import {Truck } from "react-feather";
 
 const DiliveryBTN : React.FC = () => {
     return (

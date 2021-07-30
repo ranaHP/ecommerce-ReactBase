@@ -1,5 +1,5 @@
-import React from 'react';
-import { Col, Nav, Row, Image } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Col, Row, Image } from 'react-bootstrap';
 import BootstrapTable from 'react-bootstrap-table-next';
 import { IOrderItem } from '../../../Types';
 import {products} from "../Checkout-item-data";
@@ -47,10 +47,10 @@ const options = {
   };
   
 const CheckoutPageTable: React.FC = () => {
-    
+    const [itemNumber, setItemNumber] = useState<number>(0);
     const checkoutList:IOrderItem [] = useSelector((state: RootState) => state.checkoutReducer.checkoutList);  
     const dispatch = useDispatch(); 
-    
+    console.log(checkoutList)
     const priceFormatter = (cell:string, row:any) =>  {
         return (
         <Image src={cell} style={ { width: '60px', height:"60px" } } className="checkout-image"></Image>
@@ -63,16 +63,23 @@ const CheckoutPageTable: React.FC = () => {
     );
     }
 
+    const indexFormatter = (cell:string, row:any) =>  {
+        setItemNumber(itemNumber+1);
+        return (
+            <span className="table-text" >{itemNumber}</span>
+        );
+    }
+
     const headerTextFormatter = (cell:string, row:any) =>  {
     return (
         <span className="table-head-text" >{cell}</span>
     );
     }
 
-    const action = (cell:string, row:any) =>  {
+    const action = (cell:number, row:any) =>  {
         return (
             <div className="action-icon" onClick={()=>{
-                HandelOnOderItemDelete(Number(cell))
+                HandelOnOderItemDelete(cell)
             }}><Trash size={18} color={"#808080"} /></div>
         );  
     }
@@ -82,9 +89,9 @@ const CheckoutPageTable: React.FC = () => {
     }
 
     const columns = [{
-    dataField: 'item_no',
+    dataField: '_id',
     text: '#',
-    formatter: textFormatter,
+    formatter: indexFormatter,
     },
     {
     dataField: 'image',
@@ -113,7 +120,7 @@ const CheckoutPageTable: React.FC = () => {
     formatter: textFormatter
     },
     {
-    dataField: 'item_no',
+    dataField: '_id',
     text: 'action',
     formatter: action
     }];

@@ -3,9 +3,7 @@ import { CheckoutType } from "../Interfaces/inteface";
 import { ADD_ORDER_ITEM, DELETE_ORDER_ITEM } from "../constants/CheckoutConstants";
 
 const initialState: StoreType = {
-    checkoutList:[
-      
-]
+    checkoutList:[]
 }
 
 interface  StoreType {
@@ -31,7 +29,7 @@ const getLocalStorage = ():StoreType => {
 export const CheckoutReducer = (state:StoreType = getLocalStorage(), action: CheckoutType) => {
     switch (action.type) {
         case ADD_ORDER_ITEM:{
-            const index = state.checkoutList.findIndex((orderItem: IOrderItem) => orderItem.item_no == action.payload.item_no);
+            const index = state.checkoutList.findIndex((orderItem: IOrderItem) => orderItem._id == action.payload._id);
             if(index == -1){
                 updateLocalStorage([...state.checkoutList, action.payload]);
                 return{
@@ -50,7 +48,8 @@ export const CheckoutReducer = (state:StoreType = getLocalStorage(), action: Che
             
         }
         case DELETE_ORDER_ITEM:{
-            const orderList  =  state.checkoutList.filter((orderItem: IOrderItem, index: number) => orderItem.item_no != action.payload);
+            // alert(action.payload)
+            const orderList  =  state.checkoutList.filter((orderItem: IOrderItem, index: number) => orderItem._id !== action.payload);
             updateLocalStorage(orderList);
             
             return{

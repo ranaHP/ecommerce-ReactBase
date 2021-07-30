@@ -4,27 +4,46 @@ export interface ICategoryItem {
 
 }
 export interface IProductItem{
+    _id: number
     name: string
     image: string
     price: number
     offrePrice: number
-    item_no: number
     qty: number
 }
 
 export interface IProductList {
     Grocery: IProductItem[]
     Pharmacy: IProductItem[]
-    Food: IProductItem[]
+    Interial: IProductItem[]
     Electronic: IProductItem[]
 }
 
 export interface IOrderItem {
-    item_no: number
+    _id: number
     name: string
     qty: number
     unite_price: number
     offer_price: number
     image: string,
     amount: number
+}
+export interface IFormGroup {
+    name: string
+    label: string
+    type: string
+    error: string | null
+    value: string
+}
+
+export  interface  IOption {
+    label: string
+    value: string
+}
+
+export interface INavItem {
+    title : string,
+    route : string,
+    icon: string,
+    subNav: INavItem [] | null
 }

@@ -1,11 +1,14 @@
 import React from "react";
 import { Button, Navbar } from "react-bootstrap";
-import {Phone, Trash, Truck } from "react-feather";
+import { useHistory } from "react-router-dom";
 
 const RegisterBTN : React.FC = () => {
+    const history = useHistory();
     return (
         <Navbar.Brand> 
-                <Button className="register-btn">
+                <Button className="register-btn"  onClick={() => {
+                    history.push("/register")
+                }}>
                     Register
                 </Button>
         </Navbar.Brand>

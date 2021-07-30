@@ -1,6 +1,5 @@
 import React from "react";
-import { Button, Col, Form, Image, Row } from "react-bootstrap";
-import Garlic from "../../../assets/images/product-items/garlic.png"
+import {  Col, Row } from "react-bootstrap";
 import { IProductItem } from "../../../Types";
 import ProductItem from "../productItem/ProductItem";
 

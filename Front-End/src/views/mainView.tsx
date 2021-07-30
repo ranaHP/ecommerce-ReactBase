@@ -11,24 +11,40 @@ import {
     Route,
   } from "react-router-dom";
 import CheckoutPage from "../components/checkout-page/CheckoutPage";
+import Login from "./loginPage";
+import Register from "./registerPage";
+import Dashboard from "./dashBoard";
 
 const MainView : React.FC = () => {
     return (
        <Container fluid={true}  className="p-0" >
-           <Router>
-                <TopNavbar/>
-                <MainNavBar/>
-                <SubNavBar/>
-                <Switch>
-                    <Route path="/checkout">
-                        <CheckoutPage />
+            <Router>
+                <Switch> 
+                    <Route path="/dashboard">
+                        <Dashboard />
                     </Route>
                     <Route path="/">
-                        <HomePage />
+                        <TopNavbar/>
+                        <MainNavBar/>
+                        <SubNavBar/>
+                        <Switch>
+                            <Route path="/checkout">
+                                <CheckoutPage />
+                            </Route>
+                            <Route path="/login">
+                                <Login/>
+                            </Route>
+                            <Route path="/register">
+                                <Register/>
+                            </Route>  
+                            <Route path="/">
+                                <HomePage />
+                            </Route>
+                        </Switch>
+                        <Footer/>
                     </Route>
                 </Switch>   
-                <Footer/>
-           </Router>
+            </Router>
        </Container>
     );
 }

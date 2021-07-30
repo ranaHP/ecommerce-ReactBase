@@ -3,22 +3,22 @@ import { ICategoryItem } from "../../Types";
 export const categoryoItems:ICategoryItem [] = [
     {
         name: "All",
-        image: "" 
+        image: ""
     },
     {
         name: "Grocery",
-        image: "" 
+        image: ""
     },
     {
         name: "Pharmacy",
-        image: "" 
+        image: ""
     },
     {
         name: "Food",
-        image: "" 
+        image: ""
     },
     {
         name: "Electronic",
-        image: "" 
+        image: ""
     }
 ]

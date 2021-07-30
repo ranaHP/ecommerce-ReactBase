@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
-import {ShoppingCart, User } from "react-feather";
+import {ShoppingCart } from "react-feather";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store/reducers/rootReducers";
 import { IOrderItem } from "../../../Types";

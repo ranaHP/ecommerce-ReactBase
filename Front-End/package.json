@@ -59,6 +59,7 @@
     "@types/react-bootstrap-table2-paginator": "^2.1.2",
     "@types/react-bootstrap-table2-toolkit": "^2.1.5",
     "@types/react-redux": "^7.1.18",
-    "@types/react-router-dom": "^5.1.8"
+    "@types/react-router-dom": "^5.1.8",
+    "@types/react-select": "^4.0.17"
   }
 }

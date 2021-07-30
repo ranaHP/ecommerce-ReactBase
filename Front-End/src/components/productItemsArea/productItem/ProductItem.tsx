@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import { Button, Col, Form, Image, Row } from "react-bootstrap";
+import { Button, Form, Image } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { addOrderItem } from "../../../store/actions/CheckoutActions";
 import { RootState } from "../../../store/reducers/rootReducers";
@@ -15,7 +15,7 @@ const ProductItem: React.FC<ProductItemProps> = (props) => {
     const [isUpdated, setisUpdated] = useState<boolean>(false);
 
     useEffect( ()=> {
-        const index = checkoutList.findIndex((orderItem: IOrderItem) => orderItem.item_no == props.productItem.item_no);
+        const index = checkoutList.findIndex((orderItem: IOrderItem) => orderItem._id == props.productItem._id);
         if(index == -1){
             
         }else{
@@ -29,7 +29,7 @@ const ProductItem: React.FC<ProductItemProps> = (props) => {
     const handelOnNewCheckoutItemAdd = () => {
         dispatch(addOrderItem(
             {
-                item_no: 3,
+                _id: 3,
                 name: "Gralic",
                 qty: 55,
                 unite_price: 350,
@@ -67,7 +67,7 @@ const ProductItem: React.FC<ProductItemProps> = (props) => {
                     <Button className={!isUpdated ? "add-to-cart " : "update"}  onClick={ ()=>{
                         dispatch(addOrderItem(
                             {
-                                item_no: props.productItem.item_no ,
+                                _id: props.productItem._id ,
                                 name: props.productItem.name,
                                 qty: qtyInput,
                                 unite_price: props.productItem.price,

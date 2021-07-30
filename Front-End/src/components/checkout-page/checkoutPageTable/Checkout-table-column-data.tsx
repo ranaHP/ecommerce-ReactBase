@@ -22,23 +22,25 @@ const headerTextFormatter = (cell:string, row:any) =>  {
   );
 }
 
-const action = (cell:string, row:any) =>  {
+const action = (cell:number, row:any) =>  {
   return (
     <div className="action-icon" onClick={()=>{
-      HandelOnOderItemDelete(Number(cell))
+      alert();
+      HandelOnOderItemDelete(cell)
     }}><Trash size={18} color={"#808080"} /></div>
   );  
 }
 
 const HandelOnOderItemDelete = (index: number) => {
+  
   const dispatch = useDispatch(); 
   dispatch(deleteOrderItem(index))
-  // alert(index);
+  
   return;
 }
 
 export const columns = [{
-  dataField: 'item_no',
+  dataField: '_id',
   text: '#',
   formatter: textFormatter,
 },
@@ -69,7 +71,7 @@ export const columns = [{
   formatter: textFormatter
 },
 {
-  dataField: 'item_no',
+  dataField: '_id',
   text: 'action',
   formatter: action
 }];

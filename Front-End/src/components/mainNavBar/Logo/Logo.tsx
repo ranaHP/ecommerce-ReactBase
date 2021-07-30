@@ -1,6 +1,5 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
-import {Phone, User } from "react-feather";
 
 const Logo : React.FC = () => {
     return (
