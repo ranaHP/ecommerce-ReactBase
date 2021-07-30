@@ -4,6 +4,7 @@ import AlreadyHaveACoount from './alreadyHaveacoount/AlreadyHaveAccount';
 import ChangeShippingAddress from './changeShippingAddress/ChangeShippingAddress';
 import CheckoutPageTable from './checkoutPageTable/CheckoutPageTable';
 import CheckoutPageTitle from './checkoutTitle/CheckoutTitle';
+import PaymentMethods from './paymentMethods/PaymentMethod';
 import ShippingAndBillingAddress from './shippingAndBillingAddress/ShippingAndBillingAddress';
 
 const CheckoutPage: React.FC = () => {
@@ -22,6 +23,9 @@ const CheckoutPage: React.FC = () => {
                 </Row>
                 <Row className="px-4 my-3">
                     <ChangeShippingAddress/>
+                </Row>
+                <Row className="px-4 my-3">
+                    <PaymentMethods/>
                 </Row>
             </Col>
         </Row>
