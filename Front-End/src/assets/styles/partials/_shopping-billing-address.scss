@@ -1,0 +1,39 @@
+.shipping-billing-address {
+    margin-left: auto;
+    border-radius: 6px;
+    border: 1px solid rgba(128, 128, 128, 0.287);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px 20px 10px 20px ;
+
+    .title-container {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.287);;
+        padding-bottom: 11px;
+        padding-top: 6px;
+        span {
+            font-weight: 500;
+        }
+    }
+    form{
+        padding-top: 15px;
+        .form-label{
+            font-size: .8em;
+            padding: 0;
+            margin: 0;
+        }
+       
+        input {
+            height: 30px;
+            border: 1px solid gray;
+
+        }
+        .input-group-text {
+            height: 30px;
+            font-size: .8em;
+        }
+        ::placeholder{
+            font-size: .8em;
+        }
+    }
+}

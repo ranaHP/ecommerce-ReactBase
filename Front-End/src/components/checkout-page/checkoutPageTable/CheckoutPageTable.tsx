@@ -70,9 +70,7 @@ const CheckoutPageTable: React.FC = () => {
             </Row>
             
         </Col>
-        <Row className="p-0 m-0 my-3">
-            <AlreadyHaveACoount/>
-        </Row>
+        
         </React.Fragment>
     )
 }
