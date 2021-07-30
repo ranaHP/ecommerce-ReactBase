@@ -1,0 +1,41 @@
+.change-shipping-billing-address {
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px 0px 10px  0px ;
+
+    .title-container {
+        padding-bottom: 11px;
+        padding-top: 6px;
+        span {
+            font-weight: 500;
+        }
+    }
+    form{
+        padding-top: 15px;
+        .form-label{
+            font-size: .8em;
+            padding: 0;
+            margin: 0;
+        }
+       
+        input[type= "radio"]  {
+            
+            border: 1px solid gray;
+
+        }
+        input[type= "text"], input[type= "password"], input[type= "email"], input[type= "number"]  {
+            height: 30px;
+            border: 1px solid gray;
+
+        }
+        .input-group-text {
+            height: 30px;
+            font-size: .8em;
+        }
+        ::placeholder{
+            font-size: .8em;
+        }
+    }
+}
