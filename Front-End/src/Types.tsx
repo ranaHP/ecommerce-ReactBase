@@ -15,5 +15,12 @@ export interface IProductList {
     Pharmacy: IProductItem[]
     Food: IProductItem[]
     Electronic: IProductItem[]
-
+}
+export interface ICartItem {
+    item_no: number
+    item: string
+    name: string
+    qty: number
+    unite_price: number
+    amount: number
 }

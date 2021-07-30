@@ -1,0 +1,125 @@
+.checkout-page-container {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    .checkout-page {
+
+        .checkout-title{
+            font-size: 1em;
+        }
+    }
+    
+    .asd{
+        background-color: green;
+        height: 500px;
+    }
+    .prooduct-table-container{
+        padding: 0px 15px 20px 15px;
+        border: 1px solid rgba(128, 128, 128, 0.253);
+        border-radius:5px;
+        .table-title {
+            padding: 10px 10px 10px 0px;
+            font-size: 0.90em;
+            font-weight: 500;
+        }
+    }
+    .react-bootstrap-table-pagination-total{
+        font-size: .9em;
+        padding-left: 10px;
+        margin: auto;
+    }
+    #pageDropDown {
+        padding: 2px 5px 2px 5px;
+        font-size: .9em;
+    }
+    a.page-link{
+        padding: 2px 5px 2px 5px;
+        font-size: .9em;
+    }
+    .active .page-item{
+        background-color: $primary-color !important;
+    }
+    .checkout-title {
+        padding-top: 40px;
+        padding-left: 0;
+        padding-bottom: 10px;
+        h5{
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+    }
+
+    .table-text {
+        line-height: 60px;
+        font-size: .85em;
+        text-align: center;
+    }
+    .table-head-text{
+        color: rgba(39, 39, 39, 0.829);
+        border: 0;
+        padding-bottom: 10px;
+        font-size: .84em;
+
+    }
+    .action-icon{
+        padding-top: 15px;
+    }
+   
+    th{
+        border-bottom: .2px solid rgba(128, 128, 128, 0.219) !important;
+        padding-bottom: 10px;
+    }
+    .est-total-container{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px 0px 20px;
+        h5 {
+            font-weight: bold;
+        }
+        span {
+            color: #c41f34;
+            font-weight: bold;
+        }
+    }
+    .delivery-price-container {
+       display: flex;
+        border-bottom:  1px solid rgba(128, 128, 128, 0.287);
+        justify-content: space-between;
+        padding: 10px 20px 10px 20px;
+        h5 {
+            font-weight: bold;
+        }
+
+    }
+    .already-have-account {
+        margin-left: auto;
+        border-radius: 6px;
+        border: 1px solid rgba(128, 128, 128, 0.287);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px 10px 20px ;
+        height: 60px;
+        button {
+            background-color: $primary-color;
+            color: white;
+            border: 0;
+            width: 200px;
+        }
+        span {
+            line-height: 40px;
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .checkout-page-container {
+        font-size: 0.93em;
+        .already-have-account{
+            text-align: center;
+            flex-direction: column;
+            height: 100%;
+            button {
+               margin: auto;
+            }
+        }
+        
+    }
+ }
