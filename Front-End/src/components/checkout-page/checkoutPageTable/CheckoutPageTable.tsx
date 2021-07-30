@@ -1,14 +1,15 @@
 import React from 'react';
 import { Col, Nav, Row, Image } from 'react-bootstrap';
 import BootstrapTable from 'react-bootstrap-table-next';
-import { ICartItem } from '../../../Types';
-// import paginationFactory from 'react-bootstrap-table2-paginator';
+import { IOrderItem } from '../../../Types';
 import {products} from "../Checkout-item-data";
-import { columns } from './Checkout-table-column-data';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import DeliveryCharge from '../deliveryCharge/DiliveryCharge';
 import EstTotalPrice from '../estToalPrice/EstTotal';
-import AlreadyHaveACoount from '../alreadyHaveacoount/AlreadyHaveAccount';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../../store/reducers/rootReducers';
+import { Trash } from 'react-feather';
+import { deleteOrderItem } from '../../../store/actions/CheckoutActions';
 
 
 const customTotal = (from:number, to:number, size:number) => (
@@ -46,16 +47,85 @@ const options = {
   };
   
 const CheckoutPageTable: React.FC = () => {
+    
+    const checkoutList:IOrderItem [] = useSelector((state: RootState) => state.checkoutReducer.checkoutList);  
+    const dispatch = useDispatch(); 
+    
+    const priceFormatter = (cell:string, row:any) =>  {
+        return (
+        <Image src={cell} style={ { width: '60px', height:"60px" } } className="checkout-image"></Image>
+        );
+    }
+
+    const textFormatter = (cell:string, row:any) =>  {
+    return (
+        <span className="table-text" >{cell}</span>
+    );
+    }
+
+    const headerTextFormatter = (cell:string, row:any) =>  {
+    return (
+        <span className="table-head-text" >{cell}</span>
+    );
+    }
+
+    const action = (cell:string, row:any) =>  {
+        return (
+            <div className="action-icon" onClick={()=>{
+                HandelOnOderItemDelete(Number(cell))
+            }}><Trash size={18} color={"#808080"} /></div>
+        );  
+    }
+
+    const HandelOnOderItemDelete = (index: number) => {
+        dispatch(deleteOrderItem(index));
+    }
+
+    const columns = [{
+    dataField: 'item_no',
+    text: '#',
+    formatter: textFormatter,
+    },
+    {
+    dataField: 'image',
+    text: 'Image',
+    formatter: priceFormatter
+    }, 
+    {
+    dataField: 'name',
+    text: 'Name',
+    formatter: textFormatter,
+    sort: true
+    },
+    {
+    dataField: 'qty',
+    text: 'Qty',
+    formatter: textFormatter
+    },
+    {
+    dataField: 'offer_price',
+    text: 'Unit Price',
+    formatter: textFormatter
+    },
+    {
+    dataField: 'amount',
+    text: 'Amount',
+    formatter: textFormatter
+    },
+    {
+    dataField: 'item_no',
+    text: 'action',
+    formatter: action
+    }];
     return (
         <React.Fragment>
-            <Col xs={12} className="prooduct-table-container ">
-            
+            <Col xs={12} className="prooduct-table-container ">  
             <Row>
                 <Col>
                     <div className="table-title"> Shopping Cart</div>
                     <BootstrapTable keyField='id' 
                         bootstrap4 
-                        data={ products } 
+                        data={ checkoutList } 
                         columns={ columns } 
                         hover
                         condensed

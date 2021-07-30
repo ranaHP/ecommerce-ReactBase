@@ -4,6 +4,8 @@ $primary-color-opacity-low: rgba(2, 148, 2, 0.089) !default;
 $dark-green: #4a8501 !default;
 $accent-color: #db0000 !default;
 $gray_border: rgba(179, 179, 179, 0.404) !default;
+$update_btn: #17a2b8 !default;
+
 
 @if $dark-theme {
   $primary-color: darken($primary-color, 60%);

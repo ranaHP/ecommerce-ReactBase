@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Navbar } from "react-bootstrap";
-import {Phone, Trash, Truck } from "react-feather";
 
 const LoginBNT : React.FC = () => {
     return (

@@ -15,9 +15,11 @@
 
         .product-item-container {
             width: 25%;
-            padding: 10px;
+            padding: 20px;
 
             .product-item {
+                padding-top: 20px;
+                padding-bottom:5px;
                 border: 1px solid rgba(128, 128, 128, 0.377);
                 border-radius: 8px;
 
@@ -25,8 +27,7 @@
                     width: 100%;
                     background-color: transparent;
                     text-align: center;
-                   
-
+                
                     .item-title{
                         font-weight: 500;
                         font-size: 1.1em;
@@ -37,7 +38,7 @@
                     display: flex;
                     justify-content: space-around;
                     font-size: 1.15em;
-
+                    padding-top: 30px;
                     .product-ori-price{
                         color: gray;
                         text-decoration: line-through;
@@ -56,16 +57,22 @@
                     display: flex;
                     justify-content: space-around;
                     padding: 10px;
-
                     .quantity{
                         width: 30%;
                     }
-
-                    .add-to-cart{
+                    
+                    .update {
+                        background-color:white;
+                        border:1px solid $update_btn;
+                        border-radius: 25px;
+                        color: $update_btn;
+                        font-size: 0.85em;
+                    }
+                    .add-to-cart {
                         background-color: $primary-color;
                         border-radius: 25px;
                         border:1px solid $primary-color;
-                        font-size: 0.9em;
+                        font-size: 0.85em;
                     }
                 }
             }

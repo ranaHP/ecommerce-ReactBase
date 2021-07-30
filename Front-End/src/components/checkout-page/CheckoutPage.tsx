@@ -21,9 +21,9 @@ const CheckoutPage: React.FC = () => {
                 <Row className="px-4 my-3">
                     <ShippingAndBillingAddress/>
                 </Row>
-                <Row className="px-4 my-3">
+                {/* <Row className="px-4 my-3">
                     <ChangeShippingAddress/>
-                </Row>
+                </Row> */}
                 <Row className="px-4 my-3">
                     <PaymentMethods/>
                 </Row>
