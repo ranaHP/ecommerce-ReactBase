@@ -1,10 +1,12 @@
 import { Image } from 'react-bootstrap';
 import { Trash } from 'react-feather';
+import { useDispatch } from 'react-redux';
 import garlic from '../../../assets/images/product-items/garlic.png';
+import { deleteOrderItem } from '../../../store/actions/CheckoutActions';
 
 const priceFormatter = (cell:string, row:any) =>  {
     return (
-      <Image src={garlic} style={ { width: '60px' } } className="checkout-image"></Image>
+      <Image src={cell} style={ { width: '60px', height:"60px" } } className="checkout-image"></Image>
     );
 }
 
@@ -22,8 +24,17 @@ const headerTextFormatter = (cell:string, row:any) =>  {
 
 const action = (cell:string, row:any) =>  {
   return (
-    <div className="action-icon"><Trash size={18} color={"#808080"} /></div>
-  );
+    <div className="action-icon" onClick={()=>{
+      HandelOnOderItemDelete(Number(cell))
+    }}><Trash size={18} color={"#808080"} /></div>
+  );  
+}
+
+const HandelOnOderItemDelete = (index: number) => {
+  const dispatch = useDispatch(); 
+  dispatch(deleteOrderItem(index))
+  // alert(index);
+  return;
 }
 
 export const columns = [{
@@ -32,8 +43,8 @@ export const columns = [{
   formatter: textFormatter,
 },
 {
-  dataField: 'item',
-  text: 'Item',
+  dataField: 'image',
+  text: 'Image',
   formatter: priceFormatter
 }, 
 {
@@ -48,7 +59,7 @@ export const columns = [{
   formatter: textFormatter
 },
 {
-  dataField: 'unite_price',
+  dataField: 'offer_price',
   text: 'Unit Price',
   formatter: textFormatter
 },
@@ -58,7 +69,7 @@ export const columns = [{
   formatter: textFormatter
 },
 {
-  dataField: 'action',
-  text: '',
+  dataField: 'item_no',
+  text: 'action',
   formatter: action
 }];

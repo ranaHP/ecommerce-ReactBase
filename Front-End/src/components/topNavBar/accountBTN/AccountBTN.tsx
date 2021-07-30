@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
-import {Phone, User } from "react-feather";
+import { User } from "react-feather";
 
 const AccountBTN : React.FC = () => {
     return (

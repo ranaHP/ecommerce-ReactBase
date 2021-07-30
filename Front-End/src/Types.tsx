@@ -4,10 +4,12 @@ export interface ICategoryItem {
 
 }
 export interface IProductItem{
-    title: string
+    name: string
     image: string
-    price: string
-    offrePrice: string
+    price: number
+    offrePrice: number
+    item_no: number
+    qty: number
 }
 
 export interface IProductList {
@@ -16,11 +18,13 @@ export interface IProductList {
     Food: IProductItem[]
     Electronic: IProductItem[]
 }
-export interface ICartItem {
+
+export interface IOrderItem {
     item_no: number
-    item: string
     name: string
     qty: number
     unite_price: number
+    offer_price: number
+    image: string,
     amount: number
 }

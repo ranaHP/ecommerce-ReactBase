@@ -6,36 +6,68 @@ import ProductItemsSet from "./productItemsSet/ProductItemsSet";
 const productsList: IProductList = {
     
     Grocery:  [
-        {title: "Garlic" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Apple" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Onion" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Red Rice" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Dal" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Vegitale" ,image: "" ,price: "90" ,offrePrice: "65"}
+        {
+            item_no: 1,
+            name: "Apple",
+            qty: 10,
+            price: 50,
+            offrePrice: 43,
+            image: "https://purepng.com/public/uploads/large/purepng.com-fresh-applefoodsweettastyhealthyfruitappleleaf-981524677946vfurf.png"
+        },
+        {
+            item_no: 2,
+            name: "Graps",
+            qty: 2,
+            price: 120,
+            offrePrice: 118,
+            image: "https://www.pngplay.com/wp-content/uploads/4/Garlic-No-Background.png"
+        },
+        {
+            item_no: 3,
+            name: "Pera",
+            qty: 33,
+            price: 60,
+            offrePrice: 55,
+            image: "https://pics.clipartpng.com/Pear_Fruit_PNG_Clipart-242.png"
+        },{
+            item_no: 4,
+            name: "Mora",
+            qty: 55,
+            price: 35,
+            offrePrice: 30,
+            image: "https://purepng.com/public/uploads/large/purepng.com-eggseggseggshellegg-whiteegg-yolk-1411527413743absg1.png"
+        }
+        
     ],
     Pharmacy:  [
-        {title: "Garlic" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Apple" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Onion" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Red Rice" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Dal" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Vegitale" ,image: "" ,price: "90" ,offrePrice: "65"}
+        {
+            item_no: 3,
+            name: "Gralic",
+            qty: 55,
+            price: 350,
+            offrePrice: 150,
+            image: ""
+        }
     ],
     Food: [
-        {title: "Garlic" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Apple" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Onion" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Red Rice" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Dal" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Vegitale" ,image: "" ,price: "90" ,offrePrice: "65"}
+        {
+            item_no: 3,
+            name: "Gralic",
+            qty: 55,
+            price: 350,
+            offrePrice: 150,
+            image: ""
+        }
     ],
     Electronic:  [
-        {title: "Garlic" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Apple" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Onion" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Red Rice" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Dal" ,image: "" ,price: "90" ,offrePrice: "65"},
-        {title: "Vegitale" ,image: "" ,price: "90" ,offrePrice: "65"}
+        {
+            item_no: 3,
+            name: "Gralic",
+            qty: 55,
+            price: 350,
+            offrePrice: 150,
+            image: ""
+        }
     ]
 }
 
