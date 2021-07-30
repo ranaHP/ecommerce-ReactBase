@@ -1,7 +1,9 @@
 import React from 'react';
 import { Col, Nav, Row } from 'react-bootstrap';
+import AlreadyHaveACoount from './alreadyHaveacoount/AlreadyHaveAccount';
 import CheckoutPageTable from './checkoutPageTable/CheckoutPageTable';
 import CheckoutPageTitle from './checkoutTitle/CheckoutTitle';
+import ShippingAndBillingAddress from './shippingAndBillingAddress/ShippingAndBillingAddress';
 
 const CheckoutPage: React.FC = () => {
     return (
@@ -10,7 +12,12 @@ const CheckoutPage: React.FC = () => {
                 <Row className="px-4">
                     <CheckoutPageTitle/>
                     <CheckoutPageTable/>
-                    
+                </Row>
+                <Row className="px-4 my-3">
+                    <AlreadyHaveACoount/>
+                </Row>
+                <Row className="px-4 my-3">
+                    <ShippingAndBillingAddress/>
                 </Row>
             </Col>
         </Row>
