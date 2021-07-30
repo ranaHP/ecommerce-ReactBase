@@ -1,6 +1,9 @@
 import React from "react";
 import { Col, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import CategoriesDropDown from "./categories/Categories";
+import {
+    Link
+  } from "react-router-dom";
 
 const SubNavBar: React.FC = () => {
     return (
@@ -16,8 +19,8 @@ const SubNavBar: React.FC = () => {
                         <span className="d-lg-block d-none">
                         <CategoriesDropDown  />
                         </span>
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">About Us</Nav.Link>
+                        <Link to="/"><Nav.Link href="#home">Home</Nav.Link></Link>
+                        <Link to="/checkout"><Nav.Link href="#home">About Us</Nav.Link></Link>
                         <Nav.Link href="#link">FAQ</Nav.Link>
                         <Nav.Link href="#link" className="pricing">Pricing</Nav.Link>
                         <Nav.Link href="#link">Contact Us</Nav.Link>

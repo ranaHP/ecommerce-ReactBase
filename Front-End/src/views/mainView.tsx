@@ -1,24 +1,34 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import CategoryList from "../components/categoryList/CategoryList";
-import HeroBanner from "../components/heroBanner/HeroBanner";
 import MainNavBar from "../components/mainNavBar/MainNavBar";
-import SearchBox from "../components/searchBox/SearchBox";
 import SubNavBar from "../components/subNavBar/SubNavBar";
 import TopNavbar from "../components/topNavBar/TopNavbar";
-import ProductItemsArea from "../components/productItemsArea/ProductItemsArea";
 import Footer from "../components/footer/Footer";
+import HomePage from "./homePage";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+  } from "react-router-dom";
+import CheckoutPage from "../components/checkout-page/CheckoutPage";
+
 const MainView : React.FC = () => {
     return (
        <Container fluid={true}  className="p-0" >
-           <TopNavbar/>
-           <MainNavBar/>
-           <SubNavBar/>
-           <HeroBanner/>
-           <SearchBox/>
-           <CategoryList/>
-           <ProductItemsArea/>
-           <Footer/>
+           <Router>
+                <TopNavbar/>
+                <MainNavBar/>
+                <SubNavBar/>
+                <Switch>
+                    <Route path="/checkout">
+                        <CheckoutPage />
+                    </Route>
+                    <Route path="/">
+                        <HomePage />
+                    </Route>
+                </Switch>   
+                <Footer/>
+           </Router>
        </Container>
     );
 }
